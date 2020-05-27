@@ -444,10 +444,10 @@ text-align:center;
 
 <div class="header">
   <a href="#default" class="logo"><img  src="logo.jpg" style="height:150px; width:100px; "> </a>
- 
+  <div class="header-right">
    
     <a href="#about"><span style="font-size:30px; float:right; color:#D4AF37;" onclick="openNav()">&#9776;</span></a>
-  
+  </div>
 </div>
 
 
@@ -459,10 +459,10 @@ text-align:center;
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a href="#aboutus">About</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+    <a href="#aboutus" onclick="closeNav()">About</a>
+    <a href="#services"onclick="closeNav()">Services</a>
+    <a href="#gallery"onclick="closeNav()">Gallery</a>
+    <a href="#contact" onclick="closeNav()">Contact</a>
   </div>
 </div>
 
