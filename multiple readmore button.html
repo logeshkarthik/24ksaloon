@@ -1,0 +1,33 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>
+			//read more button
+function myFunction2() {
+  var dots1 = document.getElementById("dots1");
+  var moreText1 = document.getElementById("more1");
+  var btnText1 = document.getElementById("readmore1");
+
+  if (dots1.style.display === "none") {
+    dots1.style.display = "inline";
+    btnText1.innerHTML = "Read more "; 
+    moreText1.style.display = "none";
+  } else {
+    dots1.style.display = "none";
+    btnText1.innerHTML = "Read less"; 
+    moreText1.style.display = "inline";
+  }
+}
+</script>
+<script>
+$document(document).ready(function(){$(".read").click(function(){$(this).prev().toggle();$(this).siblings('.dots').toggle();});});
+</script>
+
+
+<div class=" post  justify-content-center align-items-center right . text-center " style="padding:10%;">
+
+<p style="font-family:calibri;color:black; font-size:30px;">World Class Service performed in an upscale environment will attract clientele. Our prices are very reasonable for the <span id="dots1">...</span><span id="more1" style="display:none;"> quality of services provided. , which keeps our product price at its lowest price point.</span></p><button  class="readmorebutton"style="background:grey; align:center;color:white;font-size:20px; border-radius:30px;"onclick="myFunction2()" id="readmore1">Read more     <i class="far fa-arrow-alt-circle-right"></i></button>
+
+</div>
+<div class=" post   right . text-center " style="padding:10%;">
+
+<p style="font-family:calibri;color:black; font-size:30px;">World Class Service performed in an upscale environment will attract clientele. Our prices are very reasonable for the <span id="dots1">...</span><span id="more1" style="display:none;"> quality of services provided. , which keeps our product price at its lowest price point.</span></p><button  class="readmorebutton"style="background:grey; align:center;color:white;font-size:20px; border-radius:30px;"onclick="myFunction2()" id="readmore1">Read more     <i class="far fa-arrow-alt-circle-right"></i></button>
+
+</div>

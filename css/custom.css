@@ -1,0 +1,10 @@
+
+@media screen and (max-width: 480px){
+    #sliderOne9 .slotholder .tp-bgimg.defaultimg{
+        background-image: url("../img/20_years_mail_06_mobile.jpg") !important;
+    }
+}
+
+@media screen and (max-width: 768px){
+	
+}

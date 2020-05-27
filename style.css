@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e8e8e8;
+}
+
+/* 
+#############################################
+Layouts
+#############################################
+*/
+.container{
+    margin-top: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+nav{
+    width: 100%;
+    background: #00334e;
+}
+
+nav ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    
+
+}
+
+nav ul li:hover{
+    background: #1565C0;
+}
+
+nav ul li a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.toggle{
+    width: 100%;
+    padding: 10px 20px;
+    background: #001f44;
+    text-align: right;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .toggle{
+        display: block;
+    }
+    nav ul{
+        width: 100%;
+    }  
+    nav ul li{
+        display: none;
+    }
+
+    nav ul.active li{
+        display: block;
+        text-align: center;
+    }
+}
+
+.container{
+    width: auto;
+}
+
+/* 
+##########################
+Image Container
+##########################
+*/
+
+.image-wrapper{
+    display: grid;
+    grid-template-columns: 70% auto
+}
+
+.image-wrapper> div{
+    background:#001f44;
+}
+.image-wrapper > div:nth-child(odd){
+    background: #fff;
+}
+
+ul.image-menu{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul.image-menu li{
+    list-style: none;
+    display: block;
+    padding: 1.5em;
+    background:#001f44;
+    border-bottom: 1px solid #000000;
+}
+
+ul.image-menu li.active{
+    list-style: none;
+    display: block;
+    padding: 20px;
+    background: #1565C0;
+}
+
+
+ul.image-menu li:hover{
+    background: #1565C0;
+}
+
+ul.image-menu li a{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+/* 
+##############################################
+Contents
+##############################################
+*/
+  .wrapper{
+    display: grid;
+    grid-template-columns:auto 31.5% 30%;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
+
+
+.wrapper> div{
+    padding: 0.2em;
+}
+
+
+.content-wrapper{
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-row-gap: 1em;
+}
+
+.content-wrapper> div{
+    background:#fff;
+    padding: 1em;
+    font-size: small;
+}
+
+
+.campaings{
+    margin: 0;
+    
+}
+
+.button {
+    background-color: #F50057; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .updates-contact{
+      display: grid;
+      grid-template-rows: 30% auto;
+      grid-row-gap: 1em;
+  }
+
+
+.parallax {
+background-image: url("jack-millard-sa4TE0-MrOw-unsplash.jpg");
+height: 200px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+@media only screen and (max-width: 600px){
+    .wrapper{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 100%;
+    }
+
+    .container{
+        margin-top:2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    ul.image-menu{
+        display: none;
+    }
+
+    .image-wrapper{
+        display: grid;
+        grid-template-columns: 100%
+    }
+}
+  

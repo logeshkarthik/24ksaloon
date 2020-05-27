@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="styleforfooter.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+a:hover{
+    text-decoration: none;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+font-size:25px;
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+/*-------body section images ------- */
+.responsive {
+	width: auto;
+	height: 100vh;
+	position:relative;
+}
+
+}
+.leftside, .rightside {
+	width: 50%;
+	height: 100vh;
+}
+
+@media screen and (min-width:768px) {
+	.leftside, .rightside {
+		height: auto
+	}
+}
+
+.col {
+	float: down;
+	width: 50%;
+	padding: 0px;
+	height: auto;
+}
+*{padding:0;margin:0;}
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#CCC;
+}
+/*navbar*/
+.abc{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*--------scroll to top----------*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  animation: mymove 3s infinite;
+}
+
+#myBtn:hover {
+  background-color: transparent;
+}
+@keyframes mymove {
+  50% {box-shadow: 10px 20px 30px black;}
+}
+/*--------scroll behaviour---------*/
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+<body>
+<div style="position:relative;">
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#aboutus">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+<ul style="text-decoration: none;">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#aboutus">About Us</a></li>
+  <li><a href="#gallery">Gallery</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right;margin-right:50px;"><a href="#about"><div style="">
+<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div></a></li>
+</ul>
+    <div class="row no-gutters ">
+		<div class="col-md-6 no-gutters">
+			<div class="leftside  justify-content-center align-items-center w3-animate-left">
+				<img src="sizzor_blade.png" alt="Nature" class="responsive img-fluid ">
+			</div>
+		</div>
+		<div class="col-md-6 no-gutters">
+			<div class="rightside   justify-content-center align-items-center w3-animate-left">
+				<img src="Desert.jpg" alt="Nature" class=" responsive img-fluid "
+					width="600" height="400">
+			</div>
+		</div>
+	</div>
+
+		
+		
+	
+	<div class="row no-gutters ">
+		<div class="col-md-6 no-gutters">
+			<div class="leftside  justify-content-center align-items-center w3-animate-left">
+				<img src="Tulips.jpg" alt="Nature" class="responsive img-fluid ">
+			</div>
+		</div>
+		<div class="col-md-6 no-gutters">
+			<div class="rightside   justify-content-center align-items-center">
+				<img src="Desert.jpg" alt="Nature" class=" responsive img-fluid "
+					width="600" height="400">
+			</div>
+		</div>
+	</div>
+	<div class="row no-gutters ">
+		<div class="col-md-6 no-gutters">
+			<div class="leftside  justify-content-center align-items-center">
+				<img src="Penguins.jpg" alt="Nature" class="responsive img-fluid ">
+			</div>
+		</div>
+		<div class="col-md-6 no-gutters">
+			<div class="rightside   justify-content-center align-items-center">
+				<img src="Penguins.jpg" alt="Nature" class=" responsive img-fluid "
+					width="600" height="400">
+			</div>
+		</div>
+	</div>
+	<div class="row no-gutters ">
+		<div class="col-md-6 no-gutters">
+			<div class="leftside  justify-content-center align-items-center">
+				<img src="Tulips.jpg" alt="Nature" class="responsive img-fluid ">
+			</div>
+		</div>
+		<div class="col-md-6 no-gutters">
+			<div class="rightside   justify-content-center align-items-center">
+				<img src="Desert.jpg" alt="Nature" class=" responsive img-fluid "
+					width="600" height="400">
+			</div>
+		</div>
+	</div>
+	<div class="row no-gutters flex ">
+		<div class="col-md-6 no-gutters flex">
+			<div class="leftside  justify-content-center align-items-center">
+				<img src="Penguins.jpg" alt="Image" class="image responsive img-fluid ">
+			</div>
+		</div>
+		<div class="col-md-6 no-gutters flex">
+			<div class="rightside   justify-content-center align-items-center">
+				<img src="Penguins.jpg" alt="Image" class="image responsive img-fluid "
+					width="600" height="400">
+			</div>
+		</div>
+	</div>
+	<style>
+	
+	</style>
+	
+<section id="gallery">
+<h1 style="text-align:center;">Gallery</h1>
+	
+<style>
+
+.img:hover{
+ shadow: 10px 10px;
+}
+</style>
+<script>
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+</script>
+<div class="container">
+  <div class="row"style="margin:15px">
+    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+    </a>
+    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+    </a>
+    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+    </a>
+  </div>
+  <div class="row" style="margin:15px">
+    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded">
+    </a>
+    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded">
+    </a>
+    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded">
+    </a>
+  </div>
+  <div class="row" style="margin:15px">
+    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+    </a>
+    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+    </a>
+    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+    </a>
+  </div>
+</div>
+
+	
+	
+
+
+</div>
+</section>
+
+
+
+ 
+	
+
+		
+		<footer class="footer-distributed no-gutters">
+		<style>
+  .footer {
+   font
+   left: 0;
+   bottom: 0;
+   height:60px;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+ </style>
+ 
+		<div class="footer-left">
+ 
+		<h3>WebDev<span>Trick</span></h3>
+ 
+		<p class="footer-links">
+		<a href="#">Home</a><br>
+	
+		<a href="#">About Us</a><br>
+	
+		<a href="#">Services</a><br>
+	
+		<a href="#">Products</a><br>
+	
+		<a href="#">Contact</a>
+
+		
+		</p>
+ 
+		<p class="footer-company-name">webdevtrick &copy; 2019</p>
+		</div>
+ 
+		<div class="footer-center">
+ 
+		<div>
+		<i class="fa fa-map-marker"></i>
+		<p><span>21 Revolution Street</span> Delhi, India</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-phone"></i>
+		<p>+1 555 123456</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:support@company.com">contact@webdevtrick.com</a></p>
+		</div>
+ 
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<p class="footer-company-about">
+		<span>About the Store</span>
+	Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+		</p>
+ 
+		<div class="footer-icons">
+ 
+		<a href="#"><i class="fab fa-facebook-square"></i></a>
+		<a href="#"><i class="fab fa-instagram"></i></a>
+		<a href="#"><i class="fab fa-twitter"></i></a>
+	
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+
+
+</body>
+</html>
